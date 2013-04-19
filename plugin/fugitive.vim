@@ -1380,6 +1380,7 @@ function! s:diff_restore()
         \ . ' foldmethod=' . &l:foldmethod
         \ . ' foldcolumn=' . &l:foldcolumn
         \ . ' foldlevel=' . &l:foldlevel
+        \ . (&l:foldenable ? ' foldenable' : ' nofoldenable')
   if has('cursorbind')
     let restore .= (&l:cursorbind ? ' ' : ' no') . 'cursorbind'
   endif
